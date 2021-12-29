@@ -1,0 +1,18 @@
+Package: sustools
+Title: Recursos computacionais para trabalho com dados do Sistema Único de Saúde
+Version: 0.0.1
+Authors@R: 
+    person("Ronaldo", "Alves", , "ronaldo.alves@icict.fiocruz.br", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-8358-0519"))
+Description: Este pacote tem como objetivo fornecer recursos computacionais para rotinas de trabalho com dados do Sistema Único de Saúde.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+Imports: 
+    dplyr,
+    httr,
+    magrittr,
+    purrr,
+    stringr
