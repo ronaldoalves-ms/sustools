@@ -12,6 +12,7 @@
 #'
 #' @examples
 #' library(sustools)
+#' nu_cnes <- c(2269783, 2269880, 2270021, 2270390, 2708353)
 #' dados <- search_cnes(nu_cnes)
 #'
 #' @export

@@ -32,10 +32,14 @@ devtools::install_github("ronaldoalves-ms/sustools")
 A função **search_cnes** possui um único argumento, *nu_cnes*, que especifica um vetor de códigos de estabelecimentos de saúde a serem consultados. As funções **stop_birthdefect**, **stop_hospitalization** e **stop_childdeath** possuem dois argumentos principais: (i) o argumento *dados* que especifica o data frame de interesse, (ii) o argumento *var_nome* que especifica a variável com os códigos da CID-10 a serem classificados. Veja exemplos simples de aplicação a seguir. 
 ``` r
 library(sustools)
+
+nu_cnes <- c(2269783, 2269880, 2270021, 2270390, 2708353)
 dados <- search_cnes(nu_cnes)
-dados <- stop_birthdefect(dados, dados$var_nome)
-dados <- stop_hospitalization(dados, dados$var_nome)
-dados <- stop_childdeath(dados, dados$var_nome)
+
+dados
+dados1 <- stop_birthdefect(dados, dados$var_nome)
+dados2 <- stop_hospitalization(dados, dados$var_nome)
+dados3 <- stop_childdeath(dados, dados$var_nome)
 ```
 
 A função **search_cnes** retorna um dataframe com informações básicas dos estabelecimentos de saúde. As funções **stop_birthdefect**, **stop_hospitalization** e **stop_childdeath** retornam um dataframe enriquecido com a variável "stop_code", cuja estrutura compreende os variados níveis das listas brasileiras de classificação -- veja o arquivo [stop_tables](https://github.com/ronaldoalves-ms/sustools/blob/main/data-raw/stop_tables.xlsx)
