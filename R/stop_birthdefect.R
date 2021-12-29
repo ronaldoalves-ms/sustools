@@ -39,14 +39,14 @@ stop_birthdefect <- function(dados, var_nome){
 
   dados <- dados %>%
 
-    dplyr::mutate(AC1 = dplyr::if_else(stringr::str_detect(CODCAUSAS, "Q00[0-2]|Q01|Q05"), 1, 0)) %>% # DTN
-    dplyr::mutate(AC2 = dplyr::if_else(stringr::str_detect(CODCAUSAS, "Q02"), 1, 0)) %>% # MICROCEFALIA
-    dplyr::mutate(AC3 = dplyr::if_else(stringr::str_detect(CODCAUSAS, "Q2[0-8]"), 1, 0)) %>% # CHD
-    dplyr::mutate(AC4 = dplyr::if_else(stringr::str_detect(CODCAUSAS, "Q3[5-7]"), 1, 0)) %>% # OC
-    dplyr::mutate(AC5 = dplyr::if_else(stringr::str_detect(CODCAUSAS, "Q54|Q56"), 1, 0)) %>% # GENITAL
-    dplyr::mutate(AC6 = dplyr::if_else(stringr::str_detect(CODCAUSAS, "Q66|Q69|Q7[1-3]|Q743"), 1, 0)) %>% # LB
-    dplyr::mutate(AC7 = dplyr::if_else(stringr::str_detect(CODCAUSAS, "Q79[2-3]"), 1, 0)) %>% # AWD
-    dplyr::mutate(AC8 = dplyr::if_else(stringr::str_detect(CODCAUSAS, "Q90"), 1, 0)) %>% # SD
+    dplyr::mutate(AC1 = dplyr::if_else(stringr::str_detect(code_class, "Q00[0-2]|Q01|Q05"), 1, 0)) %>% # DTN
+    dplyr::mutate(AC2 = dplyr::if_else(stringr::str_detect(code_class, "Q02"), 1, 0)) %>% # MICROCEFALIA
+    dplyr::mutate(AC3 = dplyr::if_else(stringr::str_detect(code_class, "Q2[0-8]"), 1, 0)) %>% # CHD
+    dplyr::mutate(AC4 = dplyr::if_else(stringr::str_detect(code_class, "Q3[5-7]"), 1, 0)) %>% # OC
+    dplyr::mutate(AC5 = dplyr::if_else(stringr::str_detect(code_class, "Q54|Q56"), 1, 0)) %>% # GENITAL
+    dplyr::mutate(AC6 = dplyr::if_else(stringr::str_detect(code_class, "Q66|Q69|Q7[1-3]|Q743"), 1, 0)) %>% # LB
+    dplyr::mutate(AC7 = dplyr::if_else(stringr::str_detect(code_class, "Q79[2-3]"), 1, 0)) %>% # AWD
+    dplyr::mutate(AC8 = dplyr::if_else(stringr::str_detect(code_class, "Q90"), 1, 0)) %>% # SD
     dplyr::mutate(AC9 = dplyr::if_else(IDANOMAL == 1 & MAINANOMAL == 0, 1, 0)) # OUTROS
 
 }

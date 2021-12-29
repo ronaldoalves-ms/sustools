@@ -1,6 +1,6 @@
 #' Codificação de Causas de Óbitos Evitáveis na Infância
 #'
-#' \code{stop_childeath} é uma função de codificação de causas de óbitos evitáveis em crianças menores de 5 anos de idade. A função cria um vetor de códigos identificadores (stop_code), cuja estrutura compreende variados níveis hierárquicos de classificação de causas de óbitos evitáveis.
+#' \code{stop_childdeath} é uma função de codificação de causas de óbitos evitáveis em crianças menores de 5 anos de idade. A função cria um vetor de códigos identificadores (stop_code), cuja estrutura compreende variados níveis hierárquicos de classificação de causas de óbitos evitáveis.
 #'
 #' @param dados Um data frame contendo os dados de interesse.
 #'
@@ -15,7 +15,7 @@
 #'
 #' @examples
 #' library(sustools)
-#' dados <- stop_childeath(dados, dados$var_nome)
+#' dados <- stop_childdeath(dados, dados$var_nome)
 #'
 #' @export
 
@@ -28,7 +28,7 @@
 #usethis::use_pipe(export = TRUE)
 
 
-stop_childeath <- function(dados, var_nome){
+stop_childdeath <- function(dados, var_nome){
 
   dados <- dados %>%
 
