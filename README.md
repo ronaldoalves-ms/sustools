@@ -38,7 +38,7 @@ dados <- stop_hospitalization(dados, dados$var_nome)
 dados <- stop_childdeath(dados, dados$var_nome)
 ```
 
-A função **search_cnes** retorna um dataframe com informações básicas dos estabelecimentos de saúde. As funções **stop_birthdefect**, **stop_hospitalization** e **stop_childdeath** retornam um dataframe enriquecido com a variável "stop_code", cuja estrutura compreende os variados níveis das listas brasileiras de classificação -- veja O arquivo [stop_tables](https://github.com/ronaldoalves-ms/sustools/blob/main/data-raw/stop_tables.xlsx)
+A função **search_cnes** retorna um dataframe com informações básicas dos estabelecimentos de saúde. As funções **stop_birthdefect**, **stop_hospitalization** e **stop_childdeath** retornam um dataframe enriquecido com a variável "stop_code", cuja estrutura compreende os variados níveis das listas brasileiras de classificação -- veja o arquivo [stop_tables](https://github.com/ronaldoalves-ms/sustools/blob/main/data-raw/stop_tables.xlsx)
 para detalhes das classificações.
 
 ### Referências
