@@ -34,12 +34,12 @@ A função **search_cnes** possui um único argumento, *nu_cnes*, que especifica
 library(sustools)
 
 nu_cnes <- c(2269783, 2269880, 2270021, 2270390, 2708353)
-dados <- search_cnes(nu_cnes)
+df_cnes <- search_cnes(nu_cnes)
 
 dados
-dados1 <- stop_birthdefect(dados, dados$var_nome)
-dados2 <- stop_hospitalization(dados, dados$var_nome)
-dados3 <- stop_childdeath(dados, dados$var_nome)
+df_sinasc <- stop_birthdefect(dados, dados$var_nome)
+df_sih <- stop_hospitalization(dados, dados$var_nome)
+df_sim <- stop_childdeath(dados, dados$var_nome)
 ```
 
 A função **search_cnes** retorna um dataframe com informações básicas dos estabelecimentos de saúde. As funções **stop_birthdefect**, **stop_hospitalization** e **stop_childdeath** retornam um dataframe enriquecido com a variável "stop_code", cuja estrutura compreende os variados níveis das listas brasileiras de classificação -- veja o arquivo [stop_tables](https://github.com/ronaldoalves-ms/sustools/blob/master/data/stop_tables.xlsx)
